@@ -1,4 +1,4 @@
-# Frontend Dockerfile
+# Frontend Dockerfile - Base Image
 FROM node:20
 
 # Set the working directory inside the container
