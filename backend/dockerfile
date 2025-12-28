@@ -1,4 +1,4 @@
-# Backend Dockerfile
+# Backend Dockerfile - Base Image
 FROM python:3.9-slim
 
 # Set the working directory inside the container
