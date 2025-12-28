@@ -1,4 +1,4 @@
-# Frontend Dockerfile (for Node.js / Next.js)
+# Frontend Dockerfile
 FROM node:20
 
 # Set the working directory inside the container
@@ -13,7 +13,7 @@ RUN npm install
 # Copy the rest of the frontend application from notes-app
 COPY notes-app/ .
 
-# Expose the port (usually 3000 for Next.js or other Node.js apps)
+# Expose the port
 EXPOSE 3000
 
 # Start the app
