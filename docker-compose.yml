@@ -3,26 +3,26 @@ version: '3.8'
 services:
   frontend:
     build:
-      context: ./frontend  # Path to your frontend folder
+      context: ./frontend
     ports:
-      - "3000:3000"  # Expose port 3000 (for Next.js or Node.js)
+      - "3000:3000"
     depends_on:
       - backend
     networks:
       - app-network
 
   backend:
-    build: ./backend  # Path to your backend directory
+    build: ./backend
     volumes:
       - ./backend:/app
     ports:
-      - "8000:8000"  # Expose port 8000 (for Django or other Python apps)
+      - "8000:8000"
     environment:
       MYSQL_DATABASE: notesdb
       MYSQL_USER: shankar
       MYSQL_PASSWORD: makemusic
       MYSQL_HOST: db
-      MYSQL_PORT: 3306  # Replace with your Django secret key or other env vars
+      MYSQL_PORT: 3306
     networks:
       - app-network
     depends_on:
